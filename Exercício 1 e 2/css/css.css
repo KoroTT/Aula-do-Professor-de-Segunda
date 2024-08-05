@@ -1,0 +1,184 @@
+body {
+	display: flex;
+	margin: 0;
+	flex-direction: column;
+	padding: 0;
+	color:#ffffff;
+	background-color: #d1d0d0;
+	font-family:Lexend Giga;
+    overflow-x: hidden;
+}
+header {
+	background-image: linear-gradient( to top, #d1d0d0, #000 );
+	display: flex;
+	justify-content: space-between;
+	max-height: 250px;  
+}
+.Titulo h1{
+    font-size: 35px;
+    margin-left: 15px;
+    margin-bottom: 0px;
+    color: #920a0a;
+}
+.Titulo p{
+    margin-left: 55px;
+    margin-top: 0px;
+    color: #000000;
+}
+nav{
+    margin-right: 2%;
+}
+ul{
+    text-decoration: none;
+    color: #ffffff;
+    list-style: none;
+}
+a{
+    margin-right: 1%;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 28px;
+}
+a:hover {
+    color: #920a0a;
+    transition: 300ms;
+}
+.Imagens{
+    padding-top: 25px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.Personagens{
+    margin: 10px;
+    padding: 10px;
+    max-width: 30%;
+    flex-direction: column;
+    text-align: center;
+    background-color: #a5a5a5;
+}
+.Personagens img{
+    width: 50%;
+    height: 300px;
+}
+.Personagens:hover{
+    background-color: #858585;
+    transition: 300ms;
+    h2{
+        background-color: #000;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+footer{
+    background-color: #858585;
+    max-height: 30%;
+}
+.Final{
+    display: flex;
+    justify-content: center;
+}
+.Final p{
+    font-size: 18px;
+    width: 50%;
+    padding: 10px;
+}
+.Quem{
+    padding-top: 2%;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+
+}
+.Quem::before{
+    content: '';
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    background-color: #858585;
+    clip-path: polygon(0 10%, 100% 0, 100% 80%, 0 100%);
+    z-index: 0; 
+}
+.Conteudo {
+    position: relative;
+    z-index: 1;
+} 
+#Titulo{
+    font-size: 50px;
+}
+.Conteudo p{
+    flex-direction: row;
+    margin-left: 5%;
+    z-index: 1;
+}
+.Conteudo img{
+    width: 20%;
+    margin-left: 5%;
+    z-index: 1;
+}
+.Trabalho{
+    margin-right: 3%;
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1%;
+    color: #000;
+    
+}
+#Conteudo{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    
+}
+.Dev{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 30px;
+    padding-top: 5px;
+    background-color: #858585;
+    clip-path: polygon(0 10%, 100% 0, 100% 80%, 0 100%);
+    z-index: 0; 
+}
+.Dev p{
+    width: 80%;
+}
+.Conhecimento{
+    margin-right: 3%;
+    padding: 2%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    color: #000;
+}
+.Conhecimento ul{
+    flex-direction: row ;
+    justify-content: center;
+    
+}
+ul li{
+    padding: 1%;
+    width: 100%;
+    color: #000;
+}
+li img{
+    width: 50px;
+    height: 50px;
+}
+.Conhecimento li:hover{
+    background-color: #858585;
+    transition: 300ms;
+    img{
+        width: 60px;
+        height: 60px;
+    }
+}
+
