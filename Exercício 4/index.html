@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const url = "https://akabab.github.io/superhero-api/api/all.json"
+
+        fetch(url)
+        .then(response=>{
+            if(!response.ok){
+                throw new Error(`Erro HTTP ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data=>{
+            console.log(data.map(callBack)); //Exemplo de Map
+            if(data.publisher ==="Marvel Comics"){
+                console.log(`Reduce:`+data.reduce(callBackReduce, 0));
+            }
+            let personagemDC = data.filter(dc => dc.biography.publisher === "DC Comics");
+            personagemDC.forEach(element => {
+                console.log(element.name);
+            });
+            console.log(`Organizado por tamanho:`);
+            console.log(data.sort(callBackSortN));
+            console.log(data.sort(callBackSortS));
+        })
+        .then(error=>{
+            console.log(`Erro durante operação: ${error}`);
+        });
+
+        const callBack = function mostra(array){
+            return array.biography.alterEgos;
+        }
+        const callBackReduce = function soma(result, heroi){
+            return result + (heroi.biography.firstApperance.length);
+        }
+        const callBackSortN = function organizarN(a,b){
+            if(a.name.length > b.name.length){
+                return -1;
+            }
+            if(a.name.length < b.name.length){
+                return 1;
+            }
+            return 0
+        }
+        const callBackSortS = function organizarS(a,b){
+            if(a.name.length > b.name.length){
+                return 1;
+            }
+            if(a.name.length < b.name.length){
+                return -1;
+            }
+            return 0
+        }
+        const callBackSortL  = function organizarL(a,b){
+            
+        }
+    </script>
+</body>
+</html>
